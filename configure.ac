@@ -56,7 +56,7 @@ AS_IF([test "x$enable_usedeviceid" = "xyes"], [
     PKG_CHECK_MODULES([LIBUDEV], [libudev])
     [ADDITIONAL_LIBS="-ludev"]
 ])
-AX_PTHREAD([], [AC_MSG_ERROR([requires pthread])])
+AX_PTHREAD([], AC_MSG_ERROR([Requires pthread. Try installing autoconf-archive.]))
 
 AC_DEFINE([HASH_LIB], [Ossl], [Crypto lib for hash algorithms])
 AC_DEFINE([SYM_LIB], [Ossl], [Crypto lib for symmetric encryption algorithms])
